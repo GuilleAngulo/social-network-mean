@@ -1,0 +1,148 @@
+@font-face{
+    font-family: "yanone";
+    src: url("../../../assets/fonts/yanone.ttf");
+}
+
+@font-face{
+    font-family: "Gilroy-ExtraBold";
+    src: url("../../../assets/fonts/Gilroy-ExtraBold.otf");
+}
+
+@font-face{
+    font-family: "Gilroy-Light";
+    src: url("../../../assets/fonts/Gilroy-Light.otf");
+}
+
+*{
+    font-family: "Gilroy-Light";
+}
+
+#start-chat{
+    width: 50%;
+    margin: 10% 25%;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.start-chat{
+    width: 250px;
+    height: 70px;
+    font-family: "Gilroy-Light" !important;
+    font-size: 25px;
+    border-radius: 25px;
+    box-shadow: 5px 10px 18px #888888;
+    transition: 0.1s all;
+    margin: 15px auto;
+    background: white;
+    
+
+}
+
+.start-chat:hover{
+    background: #eee;
+}
+
+
+#chat{
+    display: none;
+    width: 50%;
+    margin: 0% 25%;
+    margin-bottom: 2%;
+    padding-bottom: 2%;
+    background-color: #ededed;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.chat-header{
+    padding:1%;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Gilroy-ExtraBold" !important;
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-right: 50px;
+}
+
+.users{
+    float:left;
+    text-align: right;
+    font-family: "Gilroy-Light";
+    margin-top: 20px;
+}
+
+.user-icon{
+    border-radius: 200px;
+    width: 40px;
+}
+
+#active_users{
+    margin-left: 7px;
+    font-size: 25px;
+    float: right;
+}
+
+.boton_chat{
+    margin-top: 10px;
+}
+
+#messages{
+    margin: 1% 2%;
+    width: 95%;
+    height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #eee;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.envio{
+    width: 100%;
+}
+
+.btn-success{
+    border-radius: 20px; 
+}
+
+.text{
+    width: 83%;
+    border-radius: 25px;
+    display: inline-block;
+    height: 34px;
+    float: left;
+    margin-bottom: 2%;
+    margin-right: 1%;
+    padding: 5px;
+    outline: none;
+}
+
+#messageForm{
+    padding: 1%;
+}
+
+.disconnect{
+    float: right;
+    margin-top: -67px;
+}
+
+.switch-off{
+    width: 40px;
+    cursor: pointer;
+    opacity: 0.6;
+}
+.switch-off:hover{
+    opacity: 1;
+}
+
+.chat-icon{
+    width: 60px;
+}
+
+

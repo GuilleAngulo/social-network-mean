@@ -1,0 +1,79 @@
+@font-face{
+    font-family: "Gilroy-Light";
+    src: url("../../../../assets/fonts/Gilroy-Light.otf");
+}
+
+@font-face{
+    font-family: "Gilroy-Bold";
+    src: url("../../../../assets/fonts/Gilroy-ExtraBold.otf");
+}
+
+*{
+    text-decoration: none !important;
+    
+}
+
+.message-container{
+    width: 67%;
+}
+
+.panel-default {
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    width: 470px;
+}
+
+.panel-body {
+    padding: 0px 15px;
+}
+
+.user-name{
+    width: 100%;
+}
+
+.message-text{
+    width:100% !important; 
+    word-wrap:break-word !important; 
+    display:inline-block !important;
+    font-family: "Gilroy-Light";
+}
+
+.no-messages{
+    font-family: "Gilroy-Light";
+    font-size: 20px;
+    margin: 44px 28px;
+}
+
+.people{
+    min-height: 400px !important;
+}
+
+.pagination{
+    margin: -8px 5px -8px !important;
+    
+}
+
+.pagination>li>a{
+    color: #696969;
+    background-color: #dedede;
+    transition: 0.2s;
+    border-radius: 20px;
+    font-family: "Gilroy-Light";
+}
+
+.pagination>li>a:hover{
+    color: #696969;
+    background-color: #c3c3c3;
+}
+
+.message-to{
+    font-family: "Gilroy-Light";
+}
+
+.date{
+    float:right;
+}
+
+.previous{
+    margin-right: 5px;
+}

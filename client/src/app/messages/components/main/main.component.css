@@ -1,0 +1,82 @@
+@font-face{
+    font-family: "Gilroy-Light";
+    src: url("../../../../assets/fonts/Gilroy-Light.otf");
+}
+
+@font-face{
+    font-family: "Gilroy-Bold";
+    src: url("../../../../assets/fonts/Gilroy-ExtraBold.otf");
+}
+
+*{
+    text-decoration: none !important;
+}
+
+.global-container{
+    display: flex;
+    width:750px;
+    margin:0 auto;
+}
+
+.message-tools{
+    margin-top: 1%;
+    width: 26%;
+    float:left;
+    margin-right: 7%;
+    margin-left: -50px;
+}
+.message-container{
+    float:left;
+    border-radius: 20px;
+    box-shadow: 11px 10px 12px -5px #888888;
+    width: 600px;
+    background-color: white;
+    right:2%;
+    padding:3%;
+    margin-bottom: 20px;
+}
+
+.message-item{
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 5px 10px 18px #888888;
+    width: 100%;
+    font-family: "Gilroy-Bold";
+    font-size: 18px;
+    background-color: #e6e6e6;
+    margin: 12px;
+    height: 35px;
+    width: 206px;
+    padding: 6px 0px;
+    text-align: center;
+    list-style: none;
+    transition: 0.2s;
+}
+.message-item1,
+.message-item2{
+    width: 168px;
+   margin-left: 50px;
+}
+
+
+
+.message-item:hover{
+   color:black;
+}
+.message-item a{
+    color:#6f6f6f;
+    transition: 0.2s;
+    width: 100%;
+}
+
+.message-item a:hover{
+    color:black;
+}
+
+.activo{
+    background-color: white;
+}
+
+.glyphicon-envelope, .glyphicon-download-alt, .glyphicon-send{
+    font-size: 16px;
+    margin-right: 4%;
+}

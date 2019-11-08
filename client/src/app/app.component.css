@@ -1,0 +1,104 @@
+@font-face{
+    font-family: "Gilroy-ExtraBold";
+    src: url("../assets/fonts/Gilroy-ExtraBold.otf");
+}
+
+.navigation{
+    margin: 0px;
+    padding: 0px !important;
+    background: url(../assets/images/floor-tile.png) repeat;
+}
+
+
+.navigation .navbar{
+    border-radius: 4px !important;
+    background-color:rgba(255,255,255,0) !important;
+    border: none;
+}
+
+.navigation .navbar a{
+    color: black !important;
+    font-family: "Gilroy-ExtraBold";
+    text-transform: uppercase;
+    font-size: 18px;
+    opacity: 0.6;
+    transition: 0.2s;
+    margin: 8px;
+}
+
+.navigation .navbar span{
+    color: black !important;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.navigation .navbar a:hover,
+.navigation .navbar span:hover{
+    background-color:rgba(255,255,255,0) !important;
+    color: black !important;
+    opacity: 1 !important;
+}
+
+.active{
+    background-color:rgba(255,255,255,0) !important;
+    color: black !important;
+    opacity: 1 !important;
+}
+
+.dropdown-menu {
+    background-color: rgba(255,255,255,0.6) !important;
+    border: none;
+    border-radius: 20px;
+    margin: 15px 12px 0;
+    min-width: 137px;
+}
+
+.dropdown-menu a{
+    font-size: 12px !important;
+}
+
+.navbar-default .navbar-nav>.open>a{
+     background: rgba(255,255,255,0) !important;
+     color: black !important;
+     opacity: 1 !important;
+}
+
+.navigation .navbar .dropdown-menu a{
+    background-color: rgba(255,255,255,0) !important;
+}
+
+.navigation .navbar .dropdown-menu a:hover{
+     background-color: rgba(255,255,255,0) !important;
+}
+
+.navigation .avatar{
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 100px;
+    overflow: hidden;
+    margin-top: 13px;
+    margin-right: -10px;
+}
+
+.navigation .avatar img{
+    height: auto;
+    width: 100% !important;
+}
+
+.navbar-nav>li>.dropdown-menu {
+    margin-top: -6px !important;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+}
+
+
+.footer {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}

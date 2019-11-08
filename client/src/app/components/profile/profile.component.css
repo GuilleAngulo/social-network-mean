@@ -1,0 +1,48 @@
+@font-face{
+    font-family: "Gilroy-Light";
+    src: url("../../../assets/fonts/Gilroy-Light.otf");
+}
+
+*{
+    text-decoration: none !important;
+}
+
+.profile-info{
+    font-family: "Gilroy-Light";
+    display:flex;
+    width: 100%;
+}
+
+#data-profile .avatar {
+    width: 185px !important;
+    height: 185px !important;
+    margin-right: 5% !important;
+    margin-left: 2% !important;
+}
+
+#data-profile .stats {
+    border-left: 2px solid #ccc;
+    margin-left: 35px;
+    padding-left: 27px;
+    padding-top: 4%;
+    height: 182px;
+    text-decoration: none !important;
+}
+
+#data-profile .stats a {
+    font-size: 22px;
+    line-height: 44px;
+}
+
+.number-stats{
+    font-size: 22px;
+}
+
+.label-stats{
+    font-size: 20px;
+}
+
+.label-default{
+    font-size: 86%;
+}
+

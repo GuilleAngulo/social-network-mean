@@ -1,0 +1,20 @@
+<div class="global-container">
+    <div class="col-lg-4 message-tools">
+             <ul>
+                <li role="presentation" [routerLinkActive]="['activo']" class="message-item message-item1">
+                    <a [routerLink]="['send']"><span class="glyphicon glyphicon-envelope"></span>Send Message</a>
+                </li>
+                <li role="presentation" [routerLinkActive]="['activo']" class="message-item message-item2">
+                    <a [routerLink]="['sent']"><span class="glyphicon glyphicon-send"></span>Sent Messages</a>
+                </li>
+                <li role="presentation" [routerLinkActive]="['activo']" class="message-item message-item3">
+                    <a [routerLink]="['received']"><span class="glyphicon glyphicon-download-alt"></span>Received Messages</a>
+                </li>
+            </ul>
+    </div>
+
+    <div class="col-lg-8 message-container">
+    <!--COMPONENTS / ROUTER OUTLET-->
+        <router-outlet></router-outlet>
+    </div>
+</div>

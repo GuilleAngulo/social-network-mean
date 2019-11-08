@@ -1,0 +1,133 @@
+@font-face{
+    font-family: "Gilroy-ExtraBold";
+    src: url("../../../assets/fonts/Gilroy-ExtraBold.otf");
+}
+
+@font-face{
+    font-family: "Gilroy-Light";
+    src: url("../../../assets/fonts/Gilroy-Light.otf");
+}
+
+
+.h1-strong{
+  text-align: center;
+  font-family: "Gilroy-ExtraBold";
+  margin-bottom: 15px;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register form {
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 5px 10px 18px #888888;
+    margin: 20px 315px;
+    padding: 30px 40px;
+}
+
+.register p {
+  margin-bottom: 20px;
+}
+
+.register label {
+  font-family: "Gilroy-Light";
+  font-size: 16px;
+}
+
+.register input {
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+  padding: 7px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 1px solid #ccddef;
+}
+
+.register a {
+  font-family: "Gilroy-Light";
+  text-decoration: none;
+  font-size: 12px;
+  float: center;
+}
+
+.register span{
+    font-family: "Gilroy-Light";
+}
+
+
+.btn-success{
+  display: block;
+  min-width: 120px;
+  max-width: 200px;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  margin: auto;
+  padding: 7px;
+}
+
+.alert {
+  margin-bottom: 5px;
+  padding: 1%;
+}
+
+form {
+  overflow: hidden;
+  animation: fade 250ms;
+}
+
+form p:nth-child(2){
+  animation: move 500ms;
+}
+form p:nth-child(3){
+  animation: move 400ms;
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+}
+form p:nth-child(4){
+  animation: move 400ms;
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+}
+form p:nth-child(5){
+  animation: move 400ms;
+  animation-delay: 300ms;
+  animation-fill-mode: backwards;
+}
+form p:nth-child(6){
+  animation: move 400ms;
+  animation-delay: 400ms;
+  animation-fill-mode: backwards;
+}
+
+form .register-button {
+  animation: move 400ms;
+  animation-delay: 500ms;
+  animation-fill-mode: backwards;
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translateX(-35%);
+  } to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  } to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

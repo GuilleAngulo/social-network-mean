@@ -1,0 +1,59 @@
+    <!--<div class="col-lg-10">-->
+    <!--<h3>{{title}}</h3>-->
+    
+    <!--SENT MESSAGES-->
+    <div class="" *ngIf="messages">
+        <div *ngIf="messages && messages.length == 0" class="no-messages">
+            You didn´t send <i>any</i> messages.
+        </div>
+        <div *ngFor="let message of messages" class="item-user">
+            <div class="panel panel-default" *ngIf="message.emitter">
+              <div class="panel-body">
+                 
+                 <div class="loading" *ngIf="loading">
+                    <img src="../../../assets/images/lg.dual-ring-loader.gif" />
+                </div> 
+                  
+                <!--SENDER IMAGE -->  
+                <!--<div class="image-user pull-left">
+                    <a href="#">
+                      <img src="{{ url + 'get-image-user/' + message.emitter.image}}" *ngIf="message.emitter.image" />
+                      <img src="assets/user-icon.jpg" class="avatar-default" *ngIf="!message.emitter.image" />
+                    </a>
+                  </div>-->
+                  
+                  <div class="user-name pull-left">
+                    <p class="name-surname">
+                         <span class="message-to">
+                            To <a [routerLink]="['/profile', message.receiver._id]">{{message.receiver.name + ' ' + message.receiver.surname}}</a>
+                        </span>
+                        &nbsp;
+                        <span class="date nickname">
+                            <!--The publication time will be publish with the moment pipe amTimeAgo (how much time ago from now). Optional pipe of languague is commented-->
+                            <i>{{ message.created_at | amFromUnix | amDateFormat: 'HH:mm'}}</i>
+                            &nbsp;|
+                            <i> {{ (message.created_at |amFromUnix) | amTimeAgo }} </i>
+                            <!--PIPE IN SPANISH-->
+                            <!--{{ (publication.created_at |amFromUnix) | amLocale:'es' | amTimeAgo }}-->
+                        </span>
+        
+                    </p>
+                    <div class="message-text">
+                        <p><strong>
+                            {{message.text}}
+                            </strong>
+                        </p>
+                    </div>
+                  </div>       
+              </div>  
+            </div>
+        </div>
+        
+        <!--PAGINATION-->
+        <ul class="pagination pull-right" *ngIf="pages > 1">
+            <li *ngIf="page > 1"><a class="previous" [routerLink]="['/messages/sent', prev_page]">Previous</a></li>
+            <li *ngIf="pages != page"><a class="next" [routerLink]="['/messages/sent', next_page]">Next</a></li>
+        </ul>
+    
+    
+<!--</div>-->

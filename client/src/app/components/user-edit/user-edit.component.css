@@ -1,0 +1,96 @@
+@font-face{
+    font-family: "Gilroy-ExtraBold";
+    src: url("../../../assets/fonts/Gilroy-ExtraBold.otf");
+}
+
+@font-face{
+    font-family: "Gilroy-Light";
+    src: url("../../../assets/fonts/Gilroy-Light.otf");
+}
+
+.h1-strong{
+  text-align: center;
+  font-family: "Gilroy-ExtraBold";
+  margin-bottom: 15px;
+}
+.user-edit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-edit form{
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 5px 10px 18px #888888;
+  margin: 20px 315px;
+  padding: 30px 40px;
+}
+
+.user-edit p {
+  margin-bottom: 20px;
+}
+
+.user-edit label{
+    font-family: "Gilroy-Light";
+    font-size: 16px;
+}
+
+.user-edit input {
+  width: 100%;
+  display: block;
+  margin-top: 8px;
+  padding: 7px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 1px solid #ccddef;
+}
+
+.btn-warning{
+  display: block;
+  min-width: 120px;
+  max-width: 200px;
+  border: none;
+  color: white;
+  border-radius: 25px;
+  margin: auto;
+  padding: 7px;
+}
+
+.alert {
+  margin-bottom: 5px;
+  padding: 1%;
+}
+
+.inputfile{
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #ededed;
+    width: 75%;
+    text-align: center;
+    margin-top: 9px;
+    border-radius: 16px;
+    transition: 0.1s;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #7b7979;
+    color: white;
+}
+
+
+.upload-image{
+   border-radius: 15px;
+}
+

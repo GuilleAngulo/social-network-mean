@@ -1,0 +1,103 @@
+<!--<div class="col-lg-4 sidebar-32">
+    <h1 class="h1-strong">Welcome {{identity.name}}</h1>
+</div>-->
+
+<div id="user-card" class="col-lg-4 panel panel-default pull-left">
+    <a class="avatar pull-left" [routerLink]="['/account']">
+        <img src="{{url + 'get-image-user/' + identity.image}}" *ngIf="identity.image" />
+        <img src="assets/user-icon.jpg" *ngIf="!identity.image" />
+    </a>
+
+
+    <div class="name-surname pull-left">
+         <a [routerLink]="['/profile/', identity._id]" class="username">
+            {{identity.name + ' ' + identity.surname}}
+        </a>
+        <p class="nickname">
+            {{identity.nick}}
+        </p>
+
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+
+        <div class="stats" *ngIf="stats">
+            <div class="following-data">
+                <a [routerLink]="['/following', identity._id, 1]">
+                    <span class="label-stats">
+                        Following
+                    </span>
+                    <span class="number-stats">
+                        {{stats.following}}
+                    </span>
+                </a>
+            </div>
+
+            <div class="following-data">
+                <a [routerLink]="['/followers', identity._id, 1]">
+                    <span class="label-stats">
+                        Followers
+                    </span>
+                    <span class="number-stats">
+                        {{stats.followed}}
+                    </span>
+                </a>
+            </div>
+
+            <div class="following-data">
+                 <a [routerLink]="['/profile', identity._id]" class="username">
+                    <span class="label-stats">
+                        Posts
+                    </span>
+                    <span class="number-stats">
+                        {{stats.publications}}
+                    </span>
+                </a>
+            </div>
+        </div>
+</div>
+
+<!--POSTS FORM-->
+
+<div id="new-publication" class="col-lg-4 pull-left panel panel-default">
+
+    <!--OLD VERSION-->
+    <!--<div class="alert alert-success" *ngIf="status == 'success'">
+        Posted correctly
+    </div>
+    <div class="alert alert-danger" *ngIf="status == 'error'">
+        Not posted
+    </div>-->
+
+
+    <form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm, $event)" class="col-lg-10 publication-form">
+        <p>
+            <label class="publication-text">¿What are you doing?</label>
+            <textarea name="text" #text="ngModel" [(ngModel)]="publication.text" class="form-control" [disabled]="loading" required></textarea>
+            <span class="warning-text" *ngIf="!text.valid && text.touched">
+                <i>Some text is required</i>
+            </span>
+        </p>
+        <p>
+            <input type="file" name="file" id="file" class="inputfile" (change)="fileChangeEvent($event)" [disabled]="loading"/>
+            <label for="file">Select an image</label>
+        </p>
+
+        <input type="submit" value="Send" class="btn btn-success" [disabled]="!newPubForm.form.valid" [disabled]="loading"/>
+
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

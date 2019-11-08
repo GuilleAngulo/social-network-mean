@@ -1,0 +1,42 @@
+@font-face{
+    font-family: "Gilroy-Light";
+    src: url("../../../assets/fonts/Gilroy-Light.otf");
+}
+
+*{
+    text-decoration: none !important;
+}
+
+.people {
+    margin-left: 15px;
+}
+
+.panel-default {
+    border-radius: 15px !important;
+}
+
+.item-user{
+    border-radius: 20px;
+    box-shadow: 5px 10px 18px #888888;
+    width: 100%;
+}
+.name-surname, .nickname{
+    font-family: "Gilroy-Light" !important; 
+}
+
+.pagination>li>a{
+    color: #696969;
+    background-color: #dedede;
+    transition: 0.2s;
+    border-radius: 20px;
+    font-family: "Gilroy-Light";
+}
+
+.pagination>li>a:hover{
+    color: #696969;
+    background-color: #c3c3c3;
+}
+
+.previous{
+    margin-right: 5px;
+}

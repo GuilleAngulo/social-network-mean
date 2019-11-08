@@ -1,0 +1,28 @@
+@font-face{
+    font-family: "Montserrat-Black";
+    src: url(../../../assets/fonts/Montserrat-Black.otf);
+}
+
+@font-face{
+    font-family: "Montserrat-Bold";
+    src: url(../../../assets/fonts/Montserrat-Bold.otf);
+}
+
+.jumbotron{
+    background-color: transparent;
+    padding-bottom: 10px !important;
+}
+
+h1{
+    font-family: "Montserrat-Black";
+    font-size: 130px;
+    margin-bottom: -90px;
+    margin-top: -40px;
+}
+
+h3{
+   font-family: "Montserrat-Bold";
+   font-size: 25px;
+   text-transform: uppercase;
+   margin-top: -10px;
+}

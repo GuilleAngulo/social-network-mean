@@ -1,0 +1,32 @@
+<div class="login">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+        <h1 class="h1-strong">{{title}}</h1>
+
+        <div class="alert alert-success" *ngIf="status == 'success'">
+            Login Successfull, Welcome!
+        </div>
+
+        <div class="alert alert-danger" *ngIf="status == 'error'">
+            Fail to login, try again.
+        </div>
+          <p>
+              <label>Email</label>
+              <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="email"/>
+              <span *ngIf="!email.valid && email.touched">
+                  <i>The email is incorrect</i>
+              </span>
+          </p>
+          <p>
+              <label>Password</label>
+              <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required autocomplete="password"/>
+              <span *ngIf="!password.valid && password.touched">
+                  <i>The password is required</i>
+              </span>
+          </p>
+
+        <div class="enter-button">
+          <input type="submit" value="Enter" class="btn btn-success" [disabled]="!loginForm.form.valid" />
+          <a [routerLink]="['/forgot-password']"class="forgot-password-text" href=""><i>Forgot your password?</i></a>
+        </div>
+    </form>
+</div>
