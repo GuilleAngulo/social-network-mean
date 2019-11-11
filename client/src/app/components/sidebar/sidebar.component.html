@@ -1,7 +1,3 @@
-<!--<div class="col-lg-4 sidebar-32">
-    <h1 class="h1-strong">Welcome {{identity.name}}</h1>
-</div>-->
-
 <div id="user-card" class="col-lg-4 panel panel-default pull-left">
     <a class="avatar pull-left" [routerLink]="['/account']">
         <img src="{{url + 'get-image-user/' + identity.image}}" *ngIf="identity.image" />
@@ -60,16 +56,6 @@
 <!--POSTS FORM-->
 
 <div id="new-publication" class="col-lg-4 pull-left panel panel-default">
-
-    <!--OLD VERSION-->
-    <!--<div class="alert alert-success" *ngIf="status == 'success'">
-        Posted correctly
-    </div>
-    <div class="alert alert-danger" *ngIf="status == 'error'">
-        Not posted
-    </div>-->
-
-
     <form #newPubForm="ngForm" (ngSubmit)="onSubmit(newPubForm, $event)" class="col-lg-10 publication-form">
         <p>
             <label class="publication-text">¿What are you doing?</label>

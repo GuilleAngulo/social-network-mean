@@ -1,58 +1,53 @@
 <div class="loading" *ngIf="loading">
     <img src="../../../assets/images/lg.dual-ring-loader.gif" />
-</div> 
+</div>
 
-<div *ngIf="publications && publications.length == 0" class="no-publications">
+<div *ngIf="publications && publications.length == 0" class="col-lg-12 no-publications">
         This users doesn´t have <i>any</i> post.
 </div>
-<div id="publications"  *ngIf="publications && publications.length > 0">
-        <div *ngFor="let publication of publications" class="item-publication">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    
-                    <div class="image-user pull-left">
-                    <a [routerLink]="['/profile', publication.user._id]">
-                      <img src="{{ url + 'get-image-user/' + publication.user.image}}" *ngIf="publication.user.image" />
-                      <img src="assets/user-icon.jpg" class="avatar-default" *ngIf="!publication.user.image" />
-                    </a>
-                  </div>
-                    <div>
-                        <span class="user-name">
-                            {{publication.user.name + ' ' +publication.user.surname}}
-                        </span>
-                        &nbsp;|&nbsp;
-                        <span class="date">
-                            <!--The publication time will be publish with the moment pipe amTimeAgo (how much time ago from now). Optional pipe of languague is commented-->
-                            {{ (publication.created_at |amFromUnix) | amTimeAgo }}
-                            <!--{{ (publication.created_at |amFromUnix) | amLocale:'es' | amTimeAgo }}-->
-                        </span>
-                    </div>
-                    <h4 class="publication-text pull-left">
-                        {{publication.text}}
-                    </h4>
-                    
-                    <!--LIKES-->
 
-                    <div *ngIf="!publication.liked">
-                        <img (click)="doLike(publication, $event)" src="../../../assets/images/empty-heart.png" class="heart"/>
-                    </div>
-                    <div *ngIf="publication.liked">
-                        <img (click)="doLike(publication, $event)" src="../../../assets/images/liked-heart.png" class="heart"/>
-                    </div>
-                    
-                    <span class="likes">{{ publication.likes ? publication.likes.length : '0' }}</span>
-                    <!--LIKES-->
-                    
-                </div>
-            </div>
+<div id="publications"  *ngIf="publications && publications.length > 0">
+  <div *ngFor="let publication of publications" class="item-publication">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="image-user pull-left">
+          <a [routerLink]="['/profile', publication.user._id]">
+            <img src="{{ url + 'get-image-user/' + publication.user.image}}" *ngIf="publication.user.image" />
+            <img src="assets/user-icon.jpg" class="avatar-default" *ngIf="!publication.user.image" />
+          </a>
         </div>
+        <div>
+          <span class="user-name">
+            {{publication.user.name + ' ' +publication.user.surname}}
+          </span>
+          &nbsp;|&nbsp;
+          <span class="date">
+            {{ (publication.created_at |amFromUnix) | amTimeAgo }}
+          </span>
+        </div>
+          <h4 class="publication-text pull-left">
+            {{publication.text}}
+          </h4>
+        <div *ngIf="!publication.liked">
+          <img (click)="doLike(publication, $event)" src="../../../assets/images/empty-heart.png" class="heart"/>
+        </div>
+        <div *ngIf="publication.liked">
+          <img (click)="doLike(publication, $event)" src="../../../assets/images/liked-heart.png" class="heart"/>
+        </div>
+
+        <span class="likes">
+          {{ publication.likes ? publication.likes.length : '0' }}
+        </span>
+
+      </div>
     </div>
-    <div class="col-lg-12 text-center" *ngIf="publications && publications.length">
-        <p>
-           <a class="load-more" (click)="viewMore()" *ngIf="!noMore && page < pages">
-                <span class="glyphicon glyphicon-plus-sign"></span>
-            </a>
-            <!--<button type="button" class="btn btn-secondary load-more" (click)="viewMore()" *ngIf="!noMore && page < pages" >
-            </button>-->
-        </p>
-    </div>
+  </div>
+</div>
+
+<div class="col-lg-12 text-center" *ngIf="publications && publications.length">
+  <p>
+    <a class="load-more" (click)="viewMore()" *ngIf="!noMore && page < pages">
+      <span class="glyphicon glyphicon-plus-sign"></span>
+    </a>
+  </p>
+</div>

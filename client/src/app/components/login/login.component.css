@@ -96,6 +96,11 @@ form .enter-button {
   animation-fill-mode: backwards;
 }
 
+.error-login {
+  animation: bad-login 200ms linear, fade paused;
+  animation-iteration-count: 2;
+}
+
 @keyframes move {
   from {
     opacity: 0;
@@ -113,6 +118,19 @@ form .enter-button {
   } to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes bad-login {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-15%);
+  }
+  75% {
+    transform: translateX(15%);
   }
 }
 

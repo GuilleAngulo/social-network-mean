@@ -92,6 +92,9 @@
     border-top-right-radius: 20px !important;
 }
 
+.pointer{
+  cursor: pointer;
+}
 
 .footer {
   position: absolute;

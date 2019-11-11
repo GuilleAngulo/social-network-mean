@@ -9,32 +9,75 @@
 }
 
 #user-card{
-    /**TESTING**/
     margin-left:15px;
     min-width: 325px;
-}
+    padding: 25px;
 
-#user-card, #new-publication {
-    border-radius: 20px;
-    box-shadow: 5px 10px 18px #888888;
-
-    /**TESTING**/
-    margin-left:15px;
 }
 
 #new-publication {
   margin-right:15px;
   min-width: 345px;
+  padding: 18px;
 }
 
-#user-card .name-surname a {
-    text-decoration: none;
+#user-card, #new-publication {
+    border-radius: 20px;
+    box-shadow: 5px 10px 18px #888888;
+    margin-left:15px;
+    width: 30%;
+}
+
+#user-card .avatar{
+  width: 75px;
+  height: 75px;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-right: 15px;
+  transition: all .2s ease-in-out;
+}
+#user-card .avatar:hover{
+  transform: scale(1.1);
+}
+#user-card .avatar img{
+  width: 100% !important;
+}
+#user-card .avatar img:hover{
+  width: 100% !important;
 }
 
 #user-card .name-surname {
     font-size: 20px;
     margin: 10px;
+    font-weight: 300;
 }
+
+#user-card .name-surname a{
+  color: #555;
+}
+
+#user-card .name-surname .nickname{
+  color: #969393;
+}
+
+#user-card .stats{
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+}
+
+#user-card .label-stats,
+#user-card .number-stats{
+    display: block;
+    text-align: center;
+    transition: all 300ms;
+}
+
+
+#user-card .label-stats{
+  font-weight: bold;
+  color: #555;
+}
+
 
 #user-card .following-data {
     padding: 5px;
@@ -44,6 +87,11 @@
     box-sizing: border-box;
     margin-left: 6px;
     margin-bottom: -10px;
+    float: left;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-top: 10px;
+    border-right: 2px solid #eee;
     transition: 0.2s;
     text-decoration: none !important;
 }
@@ -61,13 +109,22 @@
     color: black !important;
 }
 
+
+#user-card .following-data:first-child{
+  padding-left: 6px;
+}
+
+#user-card .following-data:last-child{
+  border: none;
+}
+
 textarea.form-control {
     min-width: 100%;
 }
 
 
 .inputfile{
-    width: 0.1px;
+  width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
 	overflow: hidden;

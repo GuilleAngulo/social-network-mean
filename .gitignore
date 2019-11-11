@@ -9,6 +9,7 @@
 client/node_modules
 server/node_modules
 server/uploads/
+server/README.txt
 diagrama
 
 # profiling files

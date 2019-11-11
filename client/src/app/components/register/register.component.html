@@ -10,7 +10,7 @@
             Fail to Register, try again with a different nickname.
         </div>
         <p>
-            <label>Name</label>
+            <label>Name *</label>
             <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" class="form-control" required />
             <span *ngIf="!name.valid && name.touched">
                 <i>User Name Required</i>
@@ -18,7 +18,7 @@
         </p>
 
         <p>
-            <label>Surname</label>
+            <label>Surname *</label>
             <input type="text" name="surname" #surname="ngModel" [(ngModel)]="user.surname" class="form-control" required />
             <span *ngIf="!surname.valid && surname.touched">
                 <i>User Surname Required</i>
@@ -26,7 +26,7 @@
         </p>
 
         <p>
-            <label>Nickname</label>
+            <label>Nickname *</label>
             <input type="text" name="nick" #nick="ngModel" [(ngModel)]="user.nick" class="form-control" required />
             <span *ngIf="!nick.valid && nick.touched">
                 <i>User Nickname Required</i>
@@ -34,7 +34,7 @@
         </p>
 
         <p>
-            <label>Email</label>
+            <label>Email *</label>
             <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" class="form-control" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
             <span *ngIf="!email.valid && email.touched">
                 <i>User Email Required</i>
@@ -42,7 +42,7 @@
         </p>
 
         <p>
-            <label>Password</label>
+            <label>Password *</label>
             <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" class="form-control" required />
             <span *ngIf="!password.valid && password.touched">
                <i>User Password Required</i>

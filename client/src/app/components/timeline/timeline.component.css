@@ -3,13 +3,17 @@
     src: url("../../../assets/fonts/Gilroy-Light.otf");
 }
 
-*{
+* {
     text-decoration: none !important;
 }
 
 
 #publications {
     margin-left: 15px;
+}
+
+#publications .date{
+  color: gray;
 }
 
 .panel-default {
@@ -119,4 +123,17 @@
    margin-top: 30px;
 }
 
-
+.no-publications{
+  font-size: 22px;
+  margin-left: 5px;
+  min-height: 600px;
+  padding-top: 10px;
+}
+.publication-text-container {
+  width: 100%;
+}
+.publication-text {
+  word-wrap:break-word !important;
+  display:inline-block !important;
+  width: 70%;
+}

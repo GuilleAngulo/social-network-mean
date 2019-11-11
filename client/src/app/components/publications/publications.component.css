@@ -19,11 +19,11 @@
 }
 
 .no-publications{
-    font-size: 22px; 
+    font-size: 22px;
     margin-left: 2%;
 }
 .user-name, .date{
-    font-family: "Gilroy-Light" !important; 
+    font-family: "Gilroy-Light" !important;
 }
 
 .load-more{
@@ -37,7 +37,7 @@
     color: #444444;
 }
 
-.likes{    
+.likes{
     float: right !important;
     margin-top: 15px !important;
     margin-right: -16px !important;
@@ -49,3 +49,11 @@
    float: right;
    margin-top: 30px;
 }
+
+
+.publication-text {
+  word-wrap: break-word;
+  width: 80%;
+}
+
+

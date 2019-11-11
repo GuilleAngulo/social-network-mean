@@ -13,11 +13,10 @@ export class LoginComponent implements OnInit {
 
     public title: string;
     public user: User;
-    public status: string;
-    //logged user
+    public status: string = '';
     public identity;
-    //token hash
     public token;
+    public loginError: boolean = false;
 
   constructor(
         private _route: ActivatedRoute,
@@ -32,30 +31,29 @@ export class LoginComponent implements OnInit {
       console.log('Login Component Working...')
   }
 
+
   onSubmit(){
       //User Login with data
       this._userService.signup(this.user).subscribe(
         response => {
           this.identity = response.user;
-          if(!this.identity && !this.identity._id){
-              this.status == 'error'
-          }else{
-              //Persist user data
-              localStorage.setItem('identity', JSON.stringify(this.identity));
-
-              //Get token
-              this.getToken();
+          if(!this.identity && !this.identity._id) {
+            this.status == 'error';
+            this.loginError = true;
+          } else {
+            localStorage.setItem('identity', JSON.stringify(this.identity));
+            this.getToken();
           }
           this.status = 'success';
           }, error => {
-          var errorMessage = <any>error;
-          console.log(errorMessage);
+            var errorMessage = <any>error;
+            console.log(errorMessage);
             if(errorMessage != null){
-                this.status = 'error';
+              this.status = 'error';
+              this.loginError = true;
             }
-
-        }
-    );
+          }
+      );
   }
 
     getToken(){
@@ -63,43 +61,37 @@ export class LoginComponent implements OnInit {
       this._userService.signup(this.user, 'true').subscribe(
         response => {
           this.token = response.token;
-          if(this.token.length <= 0){
-              this.status == 'error';
-          }else{
-              //Persist User Token
-              localStorage.setItem('token', this.token);
-
-              //Get User Counts (Followers, Following and Posts)
-              this.getCounters();
-
-
-
+          if(this.token.length <= 0) {
+            this.status == 'error';
+          } else {
+            localStorage.setItem('token', this.token);
+            this.getCounters();
           }
           this.status = 'success';
           }, error => {
-          var errorMessage = <any>error;
-          console.log(errorMessage);
+            var errorMessage = <any>error;
+            console.log(errorMessage);
             if(errorMessage != null){
-                this.status = 'error';
+              this.status = 'error';
             }
-
-        }
-    );
+          }
+      );
     }
 
-    getCounters(){
+    getCounters() {
         this._userService.getCounters().subscribe(
             response => {
-                localStorage.setItem('stats', JSON.stringify(response));
-                this.status = 'success';
-                this._router.navigate(['/']);
+              localStorage.setItem('stats', JSON.stringify(response));
+              this.status = 'success';
+              this._router.navigate(['/']);
             },
             error => {
-                console.log(<any>error)
+              console.log(<any>error)
             }
         )
     }
 
-
-
+    transitionEnd(e: Event) {
+      this.loginError = false;
+    }
 }
