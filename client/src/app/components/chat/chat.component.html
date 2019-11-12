@@ -4,13 +4,12 @@
         <img class="chat-icon" src="assets/images/chat.png" />
     </button>
 </div>
-       
+
 
 <div id="chat" class="col-lg-5">
         <div class="chat-header">
            <div class="users">
                <img class="user-icon" src="assets/user-icon.jpg">
-               <!--<span id="active_users">{{numberUsers}}</span>-->
                <span id="active_users"></span>
            </div>
             <h1 id="title">{{title}}</h1>
@@ -18,10 +17,10 @@
                 <a (click)="disconnection()">
                     <img class="switch-off" src="assets/images/switch-off.png" />
                 </a>
-            </div>       
+            </div>
        </div>
-       
-       
+
+
         <div id="messages"></div>
         <form id="messageForm" #messageForm="ngForm" (ngSubmit)="onSubmit(messageForm)">
             <div class="envio">
@@ -30,6 +29,6 @@
                 <input id="send" class="btn btn-success" type="submit" value="Send"/>
             </div>
         </form>
-        
+
 
 </div>

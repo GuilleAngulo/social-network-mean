@@ -9,7 +9,9 @@
 
 .people {
     margin-left: 15px;
+    min-height: 500px;
 }
+
 
 .panel-default {
     border-radius: 15px !important;
@@ -21,7 +23,7 @@
     width: 100%;
 }
 .name-surname, .nickname{
-    font-family: "Gilroy-Light" !important; 
+    font-family: "Gilroy-Light" !important;
 }
 
 .pagination>li>a{

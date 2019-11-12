@@ -31,10 +31,6 @@ body {
 
 /**PEOPLE**/
 
-.people{
-    min-height: 500px;
-}
-
 .item-user .image-user,
 .item-publication .image-user{
     width: 75px;
@@ -67,10 +63,9 @@ body {
     width: 100% !important;
 }
 
+/**CHAT**/
 
-
-/************CHAT***************/
-.message{
+.message {
     margin: 12px;
     padding: 5px;
     border-radius: 20px;
@@ -79,21 +74,20 @@ body {
     box-shadow: 1px 0px 10px #888888;
     padding: 10px;
 }
-.hour{
+.hour {
     font-size: 14px;
     font-style: italic;
     color: grey;
     text-align: right;
-    display: inline-block;
     float: right;
     margin-right: 5px;
 }
 
-.hour span{
+.hour span {
     position:relative;
 }
 
-.connection{
+.connection {
     margin-left: 5px;
     font-style: italic;
     color: dimgrey;

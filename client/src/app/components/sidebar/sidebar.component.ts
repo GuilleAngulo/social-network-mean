@@ -34,8 +34,7 @@ export class SidebarComponent implements OnInit {
     ) {
         this.identity = this._userService.getIdentity();
         this.token = this._userService.getToken();
-        this.stats = this.getCounters(this.identity._id);
-        //this.stats = this._userService.getStats();
+        this.stats = this.getCounters();
         this.url = GLOBAL.url;
         this.publication = new Publication('', '', '', '', this.identity._id);
         this.loading = true;

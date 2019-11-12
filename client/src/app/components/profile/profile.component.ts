@@ -14,7 +14,7 @@ import { GLOBAL } from '../../services/global';
 })
 export class ProfileComponent implements OnInit {
 
-    
+
     public title: string;
     public user: User;
     public status: string;
@@ -24,7 +24,8 @@ export class ProfileComponent implements OnInit {
     public stats;
     public followed: boolean;
     public following: boolean;
-    
+    public loading: boolean;
+
   constructor(
         private _route: ActivatedRoute,
         private _router: Router,
@@ -37,14 +38,16 @@ export class ProfileComponent implements OnInit {
         this.url = GLOBAL.url;
         this.following = false;
         this.followed = false;
-        
+        this.loading = true;
+
     }
 
   ngOnInit() {
       console.log('Profile Component Working...');
       this.loadPage();
+      this.loading = false;
   }
-    
+
   loadPage(){
       this._route.params.subscribe(params => {
          let id = params['id'];
@@ -52,26 +55,26 @@ export class ProfileComponent implements OnInit {
          this.getCounters(id);
       });
   }
-    
-  getUser(userId){      
+
+  getUser(userId){
         this._userService.getUser(userId).subscribe(
             response => {
                 if(response.user){
                     this.user = response.user;
-                    
+
                     if(response.following && response.following._id){
                         this.following = true;
                     }else{
                         this.following = false;
                     }
-                    
-                    
+
+
                     if(response.followed && response.followed._id){
                         this.followed = true;
                     }else{
                         this.followed = false;
                     }
-                    
+
                 }else{
                     this.status = 'error';
                 }
@@ -85,10 +88,10 @@ export class ProfileComponent implements OnInit {
                     this._router.navigate(['/profile', this.identity._id]);
                 }
             }
-        
+
         );
     }
-    
+
     getCounters(userId){
         this._userService.getCounters(userId).subscribe(
             response => {
@@ -103,21 +106,21 @@ export class ProfileComponent implements OnInit {
             }
         );
     }
-    
-    
+
+
     followUser(userId){
         var follow = new Follow('', this.identity._id, userId);
-        
+
         this._followService.addFollow(this.token, follow).subscribe(
             response => {
-               this.following = true; 
+               this.following = true;
             },
             error => {
                 console.log(<any>error);
             }
         );
     }
-    
+
     unfollowUser(userId){
         this._followService.deleteFollow(this.token, userId).subscribe(
             response => {
@@ -126,16 +129,16 @@ export class ProfileComponent implements OnInit {
             error => {
                 console.log(<any>error)
             }
-        
+
         );
     }
-    
-    
+
+
     public followUserOver;
     mouseEnter(userId){
         this.followUserOver = userId;
     }
-    
+
     mouseLeave(){
         this.followUserOver = 0;
     }

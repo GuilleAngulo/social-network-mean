@@ -100,11 +100,6 @@ function getUnviewedMessages(req, res){
 function setViewedMessages(req, res){
     var userId = req.user.sub;
     
-    //Update function parameters:
-    //(1): Selection criteria
-    //(2): Updating value
-    //(3): "Multi" activates the update in ALL messages
-    //(4): Callback function
     Message.update({receiver: userId, viewed: false}, {viewed: true}, {"multi":true}, (err, messagesUpdated) => {
         if(err) return res.status(200).send({message: 'Request error (Setting Message)'}); 
 

@@ -27,13 +27,13 @@ export class UsersComponent implements OnInit {
   public follows;
   public status: string;
   public followUserOver;
-    
+
   constructor(
     private _route: ActivatedRoute,
     private _router: Router,
     private _userService: UserService,
     private _followService: FollowService
-    ) { 
+    ) {
         this.title = 'People';
         this.url = GLOBAL.url;
         this.identity = this._userService.getIdentity();
@@ -44,55 +44,34 @@ export class UsersComponent implements OnInit {
       console.log('Users Component Working...');
       this.actualPage();
   }
-    
+
   actualPage(){
       this._route.params.subscribe(params => {
-         //The '+' converts it to an integer number
-         /** let page = +params['page']; 
+
+          let page;
+
+          if (!params['page'])
+              page = 1;
+          else
+              page = +params['page'];
+
+
           this.page = page;
-          
-          if(!params['page']){
-              page = 1;
-          }
-          
-          if(!page){
-              page = 1;
-          } else {
-              this.next_page = page + 1;
-              this.prev_page = page - 1;
-              
-              if(this.prev_page <= 0){
-                  this.prev_page = 1;
-              }
-          }**/
-          
-          
-          let page; 
-          
-          if(!params['page']){
-              page = 1;
-          }else{
-              page = +params['page']; 
-              
-          }
-          
-          this.page = page;
-          
+
           this.next_page = page + 1;
           this.prev_page = page - 1;
-              
+
           if(this.prev_page <= 0){
                 this.prev_page = 1;
            }
-
           //Get Users List
           this.getUsers(page);
       });
   }
-    
+
     getUsers(page){
         this._userService.getUsers(page).subscribe(
-            
+
             response => {
                 if(!response.users){
                     this.status = 'error';
@@ -101,9 +80,9 @@ export class UsersComponent implements OnInit {
                     this.users = response.users;
                     this.pages = response.pages;
                     this.follows = response.users_following;
-                    
+
                     console.log(this.follows);
-                    
+
                     if(page > this.pages){
                         this._router.navigate(['/people', 1]);
                     }
@@ -119,19 +98,19 @@ export class UsersComponent implements OnInit {
             }
         );
     }
-    
-    
+
+
     mouseEnter(user_id){
         this.followUserOver = user_id;
     }
-    
+
     mouseLeave(user_id){
         this.followUserOver = 0;
     }
-    
+
     followUser(followed){
         var follow = new Follow('', this.identity._id, followed);
-        
+
         this._followService.addFollow(this.token, follow).subscribe(
             response => {
                 if(!response.follow){
@@ -151,8 +130,8 @@ export class UsersComponent implements OnInit {
             }
         );
     }
-    
-    
+
+
     unfollowUser(followed){
         this._followService.deleteFollow(this.token, followed).subscribe(
             response => {
