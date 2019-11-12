@@ -6,7 +6,13 @@
 Developed in NodeJS, an API Rest that attend requests from the web version of the frontend.
 
 ### Frontend
-Developed in AngularJS.
+Developed in AngularJS, the main components are:
+
+#### Login / Register
+Two main options at the right-top side of the app, where you can register yourself and login as well. In case of password forgotten, the login component allows to follow a link for password reset: First an email is sent to the email address of the user with a token. This token is used to reset the user´s password in the next step (this token is set to be valid only for 60 minutes).
+
+#### 
+ 
 
 
 ### Modules
