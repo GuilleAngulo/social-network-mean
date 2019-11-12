@@ -10,22 +10,22 @@ Developed in AngularJS, the main components are:
 #### Login / Register
 Two main options at the right-top side of the app, where you can register yourself and login as well. In case of password forgotten, the login component allows to follow a link for password reset: First an email is sent to the email address of the user with a token. This token is used to reset the user´s password in the next step (this token is set to be valid only for 60 minutes).
 
-### Account
+#### Account
 Its possible to update user data at any time, including the profile photo.
 
 #### Timeline
 The publications of the people followed by the user is shown. Also at the right side of the page the "user panel" sidebar is displayed.
 
-### People
+#### People
 The list of people registered at the app. A button for follow or unfollow is enabled. Again, the current user panel is displayed.
 
 ### Profile
 By clicking the name of an user or entering the own name, the profile page is shown. All publications and stats of the user are displayed.
 
-### Messages
+#### Messages
 Shows a panel with the messages sent and received by the user. It´s possible to send messages only to people who is already following the current user.
 
-### Chat
+#### Chat
 This global chat connects everybody together for chatting in a public way.
  
 
@@ -65,10 +65,6 @@ npm start
 * [Angular](https://angular.io/) - Application framework for client-side, developed in typescript.
 * [NodeJS](https://nodejs.org/en/) - The server-side JavaScript runtime environment
 
-
-## License
-
-This project is licensed under the MIT License.
 
 ## Screens
 <img src="https://github.com/GuilleAngulo/social-network-mean/blob/master/home.png" width="420"> <img src="https://github.com/GuilleAngulo/social-network-mean/blob/master/login.png" width="420">
