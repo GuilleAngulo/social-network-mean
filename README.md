@@ -1,6 +1,5 @@
 # Social Network MEAN
-
-
+This application is a social network developed with MEAN Stack (MongoDB, Express, AngularJs and Node.js). Allows to follow people´s publications, which can include photos. Also it implements one message panel to send private messages to users, and also a global chat to talk in a public way.
 
 ### Backend
 Developed in NodeJS, an API Rest that attend requests from the web version of the frontend.
@@ -11,7 +10,23 @@ Developed in AngularJS, the main components are:
 #### Login / Register
 Two main options at the right-top side of the app, where you can register yourself and login as well. In case of password forgotten, the login component allows to follow a link for password reset: First an email is sent to the email address of the user with a token. This token is used to reset the user´s password in the next step (this token is set to be valid only for 60 minutes).
 
-#### 
+### Account
+Its possible to update user data at any time, including the profile photo.
+
+#### Timeline
+The publications of the people followed by the user is shown. Also at the right side of the page the "user panel" sidebar is displayed.
+
+### People
+The list of people registered at the app. A button for follow or unfollow is enabled. Again, the current user panel is displayed.
+
+### Profile
+By clicking the name of an user or entering the own name, the profile page is shown. All publications and stats of the user are displayed.
+
+### Messages
+Shows a panel with the messages sent and received by the user. It´s possible to send messages only to people who is already following the current user.
+
+### Chat
+This global chat connects everybody together for chatting in a public way.
  
 
 
