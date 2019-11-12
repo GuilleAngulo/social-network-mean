@@ -11,6 +11,8 @@ server/node_modules
 server/uploads/
 server/README.txt
 diagrama
+screens-template.xcf
+
 
 # profiling files
 chrome-profiler-events.json
