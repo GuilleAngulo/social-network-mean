@@ -1,4 +1,4 @@
-# Social Network MEAN
+# 🗣️ Social Network MEAN
 This application is a social network developed with MEAN Stack (MongoDB, Express, AngularJs and Node.js). Allows to follow people´s publications, which can include photos. Also it implements one message panel to send private messages to users, and also a global chat to talk in a public way.
 
 ### Backend
@@ -58,7 +58,7 @@ cd client/
 npm start
 ```
 
-## Built With
+## 🧱 Built With
 
 * [MongDB](https://www.mongodb.com/) - Database System
 * [Express](https://expressjs.com/en/guide/routing.html) - Routing framework
@@ -66,7 +66,7 @@ npm start
 * [NodeJS](https://nodejs.org/en/) - The server-side JavaScript runtime environment
 
 
-## Screens
+## 📸 Screens
 <img src="https://github.com/GuilleAngulo/social-network-mean/blob/master/home.png" width="420"> <img src="https://github.com/GuilleAngulo/social-network-mean/blob/master/login.png" width="420">
 
 <img src="https://github.com/GuilleAngulo/social-network-mean/blob/master/timeline.png" width="420"> <img src="https://github.com/GuilleAngulo/social-network-mean/blob/master/timeline-photo.png" width="420">
@@ -75,5 +75,8 @@ npm start
 
 <img src="https://github.com/GuilleAngulo/social-network-mean/blob/master/messages.png" width="420"> <img src="https://github.com/GuilleAngulo/social-network-mean/blob/master/chat.png" width="420">
 
-## Demo
+## 💬 Live Demo
+You can test it [here](http://ngsocial.guilleangulo.me)
+
+## 📹 Video
 [![Watch the demo](https://github.com/GuilleAngulo/social-network-mean/blob/master/frame.png)](https://youtu.be/zaY9g2BiZR8)
